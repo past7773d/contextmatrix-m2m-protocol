@@ -16,6 +16,7 @@ import { LiveBenchmarkLab } from './components/LiveBenchmarkLab';
 import { EnergyCalculator } from './components/EnergyCalculator';
 import { ApiGatewayTester } from './components/ApiGatewayTester';
 import { EsgCertificateGenerator } from './components/EsgCertificateGenerator';
+import { PricingMonetizationHub } from './components/PricingMonetizationHub';
 import { Leaf, ShieldCheck } from 'lucide-react';
 
 export default function App() {
@@ -116,6 +117,10 @@ export default function App() {
 
         {activeTab === 'esg' && (
           <EsgCertificateGenerator />
+        )}
+
+        {activeTab === 'pricing' && (
+          <PricingMonetizationHub />
         )}
       </main>
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award } from 'lucide-react';
+import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award, TrendingUp } from 'lucide-react';
 
-export type AppTab = 'compiler' | 'gateway' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator' | 'esg';
+export type AppTab = 'compiler' | 'gateway' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator' | 'esg' | 'pricing';
 
 interface HeaderProps {
   activeTab: AppTab;
@@ -185,6 +185,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, systemH
           >
             <Award className="w-3.5 h-3.5 text-amber-400" />
             <span>Certificado ESG Scope 3</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('pricing')}
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap cursor-pointer ${
+              activeTab === 'pricing'
+                ? 'bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm shadow-emerald-900/50 font-bold'
+                : 'text-emerald-400 hover:text-emerald-300 hover:bg-emerald-950/30 border border-emerald-800/40'
+            }`}
+          >
+            <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Planos & Monetização</span>
           </button>
         </div>
 
