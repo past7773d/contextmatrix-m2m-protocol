@@ -1,6 +1,6 @@
 {
-  "name": "ContextMatrix - Otimizador de Contexto de Máquinas & Green AI",
-  "description": "Plataforma de engenharia de contexto máquina-a-máquina e cruzamento de modelos para converter prompts em instruções sólidas, estruturadas e de baixo consumo energético.",
+  "name": "Pastana Dynamics - ContextMatrix M2M & Green AI",
+  "description": "Plataforma de engenharia de contexto máquina-a-máquina, FinOps de IA e redução de Joules desenvolvida pela Pastana Dynamics.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

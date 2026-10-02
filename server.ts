@@ -947,7 +947,7 @@ app.post('/api/esg/generate-certificate', async (req: Request, res: Response) =>
       auditVerification: {
         sha256Checksum,
         verificationMethod: 'CRYPTOGRAPHIC_M2M_ATTESTATION',
-        issuer: 'ContextMatrix Green AI Foundation (pastana7773d@gmail.com)'
+        issuer: 'Pastana Dynamics & ContextMatrix Green AI Foundation (pastanadynamics@proton.me)'
       }
     });
   } catch (err: any) {

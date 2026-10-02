@@ -135,10 +135,10 @@ export default function App() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             <span className="font-semibold text-slate-300 font-mono">
-              ContextMatrix Enterprise Protocol
+              Pastana Dynamics • ContextMatrix Protocol
             </span>
             <span>—</span>
-            <span>Engenharia de Contexto M2M & Redução de Joules em Modelos de Linguagem</span>
+            <span>Green AI Computing & FinOps Enterprise</span>
           </div>
 
           <div className="flex items-center gap-6 font-mono text-[11px]">

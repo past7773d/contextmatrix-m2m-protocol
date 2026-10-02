@@ -36,7 +36,7 @@ export const PricingMonetizationHub: React.FC = () => {
   const annualNetProfit = netMonthlyProfit * 12;
 
   const copyContactEmail = () => {
-    navigator.clipboard.writeText('pastana7773d@gmail.com');
+    navigator.clipboard.writeText('pastanadynamics@proton.me');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -432,7 +432,7 @@ export const PricingMonetizationHub: React.FC = () => {
             Precisa de uma Proposta Comercial ou Integração Personalizada?
           </h3>
           <p className="text-xs text-slate-400">
-            Fale diretamente com o autor do protocolo para consultoria FinOps de IA ou implantação em grande escala.
+            Fale diretamente com a equipe de engenharia da <strong className="text-slate-200">Pastana Dynamics</strong> para consultoria FinOps de IA ou implantação em grande escala.
           </p>
         </div>
 
@@ -444,12 +444,12 @@ export const PricingMonetizationHub: React.FC = () => {
             {copiedEmail ? (
               <>
                 <Check className="w-4 h-4" />
-                <span>pastana7773d@gmail.com copiado!</span>
+                <span>pastanadynamics@proton.me copiado!</span>
               </>
             ) : (
               <>
                 <Copy className="w-4 h-4" />
-                <span>pastana7773d@gmail.com</span>
+                <span>pastanadynamics@proton.me</span>
               </>
             )}
           </button>
@@ -462,10 +462,10 @@ export const PricingMonetizationHub: React.FC = () => {
           <div className="space-y-1">
             <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
               <Wallet className="w-5 h-5 text-emerald-400" />
-              Canais Oficiais de Liquidação & Recebimento (Inter Global)
+              Canais Oficiais de Liquidação & Recebimento — Pastana Dynamics
             </h3>
             <p className="text-xs text-slate-400">
-              Contrate os planos Pro, Enterprise ou Consultoria com liquidação direta nacional ou internacional.
+              Contrate os planos Pro, Enterprise ou Consultoria com liquidação direta nacional via PIX ou internacional via Inter Global (EUA).
             </p>
           </div>
           <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-emerald-950 border border-emerald-800 text-emerald-300 font-bold">
@@ -487,12 +487,12 @@ export const PricingMonetizationHub: React.FC = () => {
 
             <div className="space-y-1.5 text-xs font-mono text-slate-300">
               <div className="flex justify-between">
-                <span className="text-slate-500">Chave PIX:</span>
-                <span className="text-emerald-300 font-bold select-all">pastana7773d@gmail.com</span>
+                <span className="text-slate-500">Chave PIX (Email):</span>
+                <span className="text-emerald-300 font-bold select-all">pastanadynamics@proton.me</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Titular:</span>
-                <span className="text-slate-200">Vitor Pastana Santana</span>
+                <span className="text-slate-200">Vitor Pastana Santana (Pastana Dynamics)</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Instituição:</span>
@@ -502,14 +502,14 @@ export const PricingMonetizationHub: React.FC = () => {
 
             <button
               onClick={() => {
-                navigator.clipboard.writeText('pastana7773d@gmail.com');
+                navigator.clipboard.writeText('pastanadynamics@proton.me');
                 setCopiedEmail(true);
                 setTimeout(() => setCopiedEmail(false), 2000);
               }}
               className="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-semibold transition-colors cursor-pointer flex items-center justify-center gap-2"
             >
               <Copy className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Copiar Chave PIX (Email)</span>
+              <span>Copiar Chave PIX (pastanadynamics@proton.me)</span>
             </button>
           </div>
 
@@ -531,30 +531,30 @@ export const PricingMonetizationHub: React.FC = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Beneficiário:</span>
-                <span className="text-slate-200">Vitor Pastana Santana</span>
+                <span className="text-slate-200">Vitor Pastana Santana / Pastana Dynamics</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Contato Faturamento:</span>
-                <span className="text-slate-200 select-all">pastana7773d@gmail.com</span>
+                <span className="text-slate-200 select-all">pastanadynamics@proton.me</span>
               </div>
             </div>
 
             <button
               onClick={() => {
-                navigator.clipboard.writeText('pastana7773d@gmail.com');
+                navigator.clipboard.writeText('pastanadynamics@proton.me');
                 setCopiedEmail(true);
                 setTimeout(() => setCopiedEmail(false), 2000);
               }}
               className="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-semibold transition-colors cursor-pointer flex items-center justify-center gap-2"
             >
               <Copy className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Solicitar Fatura / Invoice em USD</span>
+              <span>Solicitar Invoice em USD via Proton</span>
             </button>
           </div>
         </div>
 
         <div className="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-800/40 text-[11px] text-slate-400 flex items-center justify-between">
-          <span>Envie o comprovante de liquidação para <strong className="text-slate-200">pastana7773d@gmail.com</strong> para liberação imediata de credenciais e chave de API de alta prioridade.</span>
+          <span>Envie o comprovante de liquidação para <strong className="text-slate-200 font-mono">pastanadynamics@proton.me</strong> para liberação imediata de credenciais e chaves do Gateway de alta performance.</span>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 # ContextMatrix — Otimizador de Contexto de Máquinas & Green AI
 
-**Autor:** pastana7773d (<pastana7773d@gmail.com>)  
+**Organização:** Pastana Dynamics  
+**Autor:** Vitor Pastana Santana (<pastanadynamics@proton.me>)  
 **Licença:** [Apache-2.0](./LICENSE)  
 **Padrão:** Green Software Foundation & Machine-to-Machine (M2M) Context Protocol  
 
@@ -83,5 +84,5 @@ npm start
 ---
 
 ## 📄 Licença e Autoria
-Desenvolvido por **pastana7773d** (<pastana7773d@gmail.com>).  
+Desenvolvido por **Vitor Pastana Santana** — **Pastana Dynamics** (<pastanadynamics@proton.me>).  
 Distribuído sob a licença **Apache-2.0**. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.

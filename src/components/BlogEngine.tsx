@@ -182,7 +182,7 @@ export const BlogEngine: React.FC = () => {
                 </div>
                 <div className="text-xs font-mono">
                   <span className="text-slate-200 font-semibold block">{selectedPost.author}</span>
-                  <span className="text-slate-500">Fundador & Autor do ContextMatrix</span>
+                  <span className="text-slate-500">Fundador da Pastana Dynamics • Autor do ContextMatrix</span>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@ export const BlogEngine: React.FC = () => {
               <div className="space-y-1">
                 <span className="text-xs font-mono text-emerald-400 font-bold block">Quer aplicar essa economia na sua empresa?</span>
                 <p className="text-xs text-slate-400">
-                  Experimente o Gateway ao vivo ou entre em contato pelo email <strong className="text-slate-200">pastana7773d@gmail.com</strong>.
+                  Experimente o Gateway ao vivo ou fale diretamente com nossa engenharia via <strong className="text-slate-200 font-mono">pastanadynamics@proton.me</strong>.
                 </p>
               </div>
 
