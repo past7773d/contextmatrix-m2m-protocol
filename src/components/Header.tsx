@@ -1,7 +1,7 @@
 import React from 'react';
-import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare } from 'lucide-react';
+import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award } from 'lucide-react';
 
-export type AppTab = 'compiler' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator';
+export type AppTab = 'compiler' | 'gateway' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator' | 'esg';
 
 interface HeaderProps {
   activeTab: AppTab;
@@ -65,6 +65,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, systemH
           >
             <Zap className="w-3.5 h-3.5 text-emerald-400" />
             <span>Compilador M2M</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('gateway')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap cursor-pointer ${
+              activeTab === 'gateway'
+                ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm shadow-emerald-900/40 font-bold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
+            }`}
+          >
+            <Network className="w-3.5 h-3.5 text-emerald-400" />
+            <span>API Gateway & CI/CD</span>
           </button>
 
           <button
@@ -161,6 +173,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, systemH
           >
             <Leaf className="w-3.5 h-3.5 text-green-400" />
             <span>Calculadora Verde</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('esg')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap cursor-pointer ${
+              activeTab === 'esg'
+                ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm shadow-emerald-900/40 font-bold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
+            }`}
+          >
+            <Award className="w-3.5 h-3.5 text-amber-400" />
+            <span>Certificado ESG Scope 3</span>
           </button>
         </div>
 

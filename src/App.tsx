@@ -14,6 +14,8 @@ import { ModelCrossMatrix } from './components/ModelCrossMatrix';
 import { LibrariesReview } from './components/LibrariesReview';
 import { LiveBenchmarkLab } from './components/LiveBenchmarkLab';
 import { EnergyCalculator } from './components/EnergyCalculator';
+import { ApiGatewayTester } from './components/ApiGatewayTester';
+import { EsgCertificateGenerator } from './components/EsgCertificateGenerator';
 import { Leaf, ShieldCheck } from 'lucide-react';
 
 export default function App() {
@@ -66,6 +68,10 @@ export default function App() {
           <PromptCompiler onRunBenchmarkWithPrompt={handleRunBenchmarkWithPrompt} />
         )}
 
+        {activeTab === 'gateway' && (
+          <ApiGatewayTester />
+        )}
+
         {activeTab === 'caching' && (
           <KVCacheOptimizer
             currentInstruction={benchmarkOptimizedPrompt}
@@ -106,6 +112,10 @@ export default function App() {
 
         {activeTab === 'calculator' && (
           <EnergyCalculator />
+        )}
+
+        {activeTab === 'esg' && (
+          <EsgCertificateGenerator />
         )}
       </main>
 
