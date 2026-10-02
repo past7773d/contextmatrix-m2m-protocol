@@ -1,7 +1,7 @@
 import React from 'react';
-import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award, TrendingUp } from 'lucide-react';
+import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award, TrendingUp, BookOpen } from 'lucide-react';
 
-export type AppTab = 'compiler' | 'gateway' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator' | 'esg' | 'pricing';
+export type AppTab = 'compiler' | 'gateway' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator' | 'esg' | 'pricing' | 'blog';
 
 interface HeaderProps {
   activeTab: AppTab;
@@ -197,6 +197,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, systemH
           >
             <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
             <span>Planos & Monetização</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('blog')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap cursor-pointer ${
+              activeTab === 'blog'
+                ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 shadow-sm shadow-emerald-900/40 font-bold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent'
+            }`}
+          >
+            <BookOpen className="w-3.5 h-3.5 text-teal-400" />
+            <span>Blog & Cases</span>
           </button>
         </div>
 

@@ -17,6 +17,7 @@ import { EnergyCalculator } from './components/EnergyCalculator';
 import { ApiGatewayTester } from './components/ApiGatewayTester';
 import { EsgCertificateGenerator } from './components/EsgCertificateGenerator';
 import { PricingMonetizationHub } from './components/PricingMonetizationHub';
+import { BlogEngine } from './components/BlogEngine';
 import { Leaf, ShieldCheck } from 'lucide-react';
 
 export default function App() {
@@ -121,6 +122,10 @@ export default function App() {
 
         {activeTab === 'pricing' && (
           <PricingMonetizationHub />
+        )}
+
+        {activeTab === 'blog' && (
+          <BlogEngine />
         )}
       </main>
 
