@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award, TrendingUp, BookOpen } from 'lucide-react';
+import { Cpu, Zap, Leaf, Layers, Terminal, Sparkles, Activity, Database, ShieldCheck, GitFork, MessageSquare, Network, Award, TrendingUp, BookOpen, Lock, Shield } from 'lucide-react';
 
 export type AppTab = 'compiler' | 'gateway' | 'caching' | 'fidelity' | 'pipeline' | 'delooper' | 'models' | 'libraries' | 'benchmark' | 'calculator' | 'esg' | 'pricing' | 'blog';
 
@@ -35,20 +35,21 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, systemH
             </div>
           </div>
 
-          {/* Engine Status */}
-          <div className="hidden md:flex items-center gap-4 text-xs font-mono">
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">
-              <Activity className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-              <span>Engine:</span>
-              <span className={systemHealth.hasApiKey ? "text-emerald-400 font-semibold" : "text-amber-400 font-semibold"}>
-                {systemHealth.hasApiKey ? "Gemini 3.8 Flash + AST" : "AST Determinístico Híbrido"}
-              </span>
+          {/* Engine Status & IBM Carbon 18 Standards */}
+          <div className="hidden lg:flex items-center gap-2.5 text-xs font-mono">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-950/40 border border-blue-500/40 text-blue-300 shadow-sm" title="IBM Carbon Design System v11/18 & Enterprise Dark Architecture">
+              <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+              <span className="font-bold tracking-tight">IBM Carbon 18</span>
             </div>
 
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/50 text-emerald-300">
-              <Leaf className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Green AI:</span>
-              <span className="font-semibold text-emerald-200">Zero Desperdício</span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900 border border-slate-700 text-slate-300" title="Propriedade Intelectual & Direitos Reservados">
+              <Lock className="w-3 h-3 text-amber-400" />
+              <span className="text-[11px] text-slate-300 font-semibold">Conteúdo Protegido © Pastana Dynamics</span>
+            </div>
+
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-950/40 border border-emerald-800/50 text-emerald-300">
+              <Leaf className="w-3 h-3 text-emerald-400" />
+              <span>Green AI</span>
             </div>
           </div>
         </div>

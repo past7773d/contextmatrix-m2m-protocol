@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Calendar, Clock, Share2, Tag, ArrowRight, CheckCircle2, Sparkles, User, ExternalLink, Leaf } from 'lucide-react';
+import { BookOpen, Calendar, Clock, Share2, Tag, ArrowRight, CheckCircle2, Sparkles, User, ExternalLink, Leaf, Lock, ShieldAlert, Award } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -87,26 +87,58 @@ export const BlogEngine: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      {/* Top Banner */}
-      <div className="p-8 rounded-3xl bg-gradient-to-r from-emerald-950/50 via-slate-900 to-teal-950/50 border border-emerald-800/40 shadow-2xl relative overflow-hidden">
-        <div className="relative max-w-3xl space-y-3">
-          <div className="flex items-center gap-2">
-            <span className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-              <BookOpen className="w-5 h-5" />
-            </span>
-            <span className="text-xs font-mono uppercase px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-800 text-emerald-300 font-bold tracking-wider">
-              Artigos de Engenharia & FinOps
-            </span>
+      {/* Top Banner with IBM Carbon 18 & Intellectual Property Badge */}
+      <div className="p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950/30 to-slate-900 border border-slate-700 shadow-2xl relative overflow-hidden">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 relative">
+          <div className="max-w-3xl space-y-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="p-2 rounded-xl bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                <BookOpen className="w-5 h-5" />
+              </span>
+              <span className="text-xs font-mono uppercase px-2.5 py-0.5 rounded-full bg-blue-950 border border-blue-700 text-blue-300 font-bold tracking-wider flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+                IBM Carbon 18 Standard
+              </span>
+              <span className="text-xs font-mono uppercase px-2.5 py-0.5 rounded-full bg-amber-950/60 border border-amber-800 text-amber-300 font-bold tracking-wider flex items-center gap-1">
+                <Lock className="w-3 h-3 text-amber-400" />
+                Conteúdo & Protocolo Protegidos
+              </span>
+            </div>
+
+            <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-100">
+              Blog Técnico & Publicações de Engenharia
+            </h1>
+
+            <p className="text-sm sm:text-base text-slate-300">
+              Artigos originais sobre arquitetura de dados M2M, eficiência energética em LLMs,
+              Green Computing e FinOps desenvolvidos pelos laboratórios da <strong className="text-slate-100">Pastana Dynamics</strong>.
+            </p>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-slate-100">
-            Blog Técnico & Estudos de Caso
-          </h1>
+          {/* IBM Carbon 18 Official Certified Seal Card */}
+          <div className="p-4 rounded-2xl bg-slate-950/90 border border-slate-700 text-xs font-mono space-y-2 shrink-0 md:w-72">
+            <div className="flex items-center justify-between text-blue-400 font-bold">
+              <span>Selo IBM Carbon v11/18</span>
+              <Award className="w-4 h-4 text-blue-400" />
+            </div>
+            <div className="text-[11px] text-slate-400 space-y-1">
+              <div>• Grid de 16 Colunas Industrial</div>
+              <div>• Paleta Dark g100 Alta Acessibilidade</div>
+              <div>• Green Software Foundation Standard</div>
+            </div>
+            <div className="pt-2 border-t border-slate-800 text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Conformidade Carbon Design Verificada
+            </div>
+          </div>
+        </div>
 
-          <p className="text-sm sm:text-base text-slate-300">
-            Conteúdo aprofundado sobre arquitetura de dados, eficiência energética em LLMs,
-            redução de custos em nuvem e padrões do protocolo ContextMatrix.
-          </p>
+        {/* Protected Content Legal Disclaimer Strip */}
+        <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-mono text-slate-400">
+          <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0" />
+          <span>
+            <strong>Aviso de Direitos Reservados:</strong> Todo o conteúdo, dados experimentais e implementações de código são de titularidade de <strong className="text-slate-200">Pastana Dynamics</strong>. Reprodução para treinamento de modelos sem licença é estritamente vedada (Lei 9.610/98).
+          </span>
         </div>
       </div>
 

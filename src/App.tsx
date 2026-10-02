@@ -18,7 +18,7 @@ import { ApiGatewayTester } from './components/ApiGatewayTester';
 import { EsgCertificateGenerator } from './components/EsgCertificateGenerator';
 import { PricingMonetizationHub } from './components/PricingMonetizationHub';
 import { BlogEngine } from './components/BlogEngine';
-import { Leaf, ShieldCheck } from 'lucide-react';
+import { Leaf, ShieldCheck, Lock, Award, ShieldAlert } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<AppTab>('compiler');
@@ -129,27 +129,57 @@ export default function App() {
         )}
       </main>
 
-      {/* App Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950/90 py-6 text-xs text-slate-400 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span className="font-semibold text-slate-300 font-mono">
-              Pastana Dynamics • ContextMatrix Protocol
-            </span>
-            <span>—</span>
-            <span>Green AI Computing & FinOps Enterprise</span>
+      {/* App Footer with IBM Carbon 18 & Intellectual Property Notice */}
+      <footer className="border-t border-slate-800 bg-slate-950/95 py-8 text-xs text-slate-400 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                <span className="font-bold text-slate-200 font-mono text-sm">
+                  Pastana Dynamics
+                </span>
+                <span className="text-slate-600">—</span>
+                <span className="text-slate-300 font-mono">ContextMatrix Enterprise Protocol</span>
+              </div>
+              <p className="text-xs text-slate-400">
+                Padrão Aberto de Otimização M2M, Redução de Joules em LLMs e FinOps de Inteligência Artificial.
+              </p>
+            </div>
+
+            {/* Badges: IBM Carbon 18 + Green AI + Security */}
+            <div className="flex flex-wrap items-center gap-3 font-mono text-[11px]">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-blue-950/50 border border-blue-600/40 text-blue-300 shadow-sm">
+                <Award className="w-3.5 h-3.5 text-blue-400" />
+                <span className="font-bold">IBM Carbon 18 Standard</span>
+              </div>
+
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-950/40 border border-emerald-800/40 text-emerald-300">
+                <Leaf className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Green Compute Scope 3</span>
+              </div>
+
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-900 border border-slate-700 text-slate-300">
+                <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                <span>RFC-8259 Schema Guard</span>
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-center gap-6 font-mono text-[11px]">
-            <span className="flex items-center gap-1.5 text-emerald-400">
-              <Leaf className="w-3.5 h-3.5" />
-              Green Compute Standard
-            </span>
-            <span className="flex items-center gap-1.5 text-cyan-400">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              RFC-8259 Schema Constrained
-            </span>
+          {/* Legal Rights & Protected Content Notice */}
+          <div className="pt-4 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-slate-500">
+            <div className="flex items-center gap-2 text-slate-400">
+              <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>
+                © 2026 <strong>Pastana Dynamics</strong> (Vitor Pastana Santana). Conteúdo e Protocolo Protegidos sob Registro de Propriedade Intelectual.
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4 text-slate-400">
+              <span className="text-emerald-400">PIX & Faturamento: pastanadynamics@proton.me</span>
+              <span>•</span>
+              <span>Todos os Direitos Reservados</span>
+            </div>
           </div>
         </div>
       </footer>
