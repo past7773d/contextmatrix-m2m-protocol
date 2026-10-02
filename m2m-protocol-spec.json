@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "ContextMatrix M2M Protocol Specification",
+  "version": "2.5.0",
+  "author": "pastana7773d <pastana7773d@gmail.com>",
+  "license": "Apache-2.0",
+  "classification": {
+    "domain": "Green Computing & Machine-to-Machine LLM Orchestration",
+    "targetEcosystems": ["Google DeepMind Gemini", "Direct M2M AST", "Edge On-Device"],
+    "specCompliance": "RFC-8259 Strict JSON"
+  },
+  "algorithmicParameters": {
+    "sampling": {
+      "defaultTemperature": 0.1,
+      "maxTemperatureAllowed": 0.25,
+      "defaultTopP": 0.95,
+      "rationale": "Temperaturas baixas inibem deriva estocástica e desligam ramificações desnecessárias de amostragem na GPU."
+    },
+    "reasoning": {
+      "defaultThinkingLevel": "LOW",
+      "minimalThinkingLevel": "MINIMAL",
+      "highThinkingLevel": "HIGH",
+      "rationale": "Limitar o raciocínio recursivo a tarefas que realmente exigem inferência formal multi-passo previne até 85% de desperdício em FLOPs."
+    },
+    "outputEncoding": {
+      "responseMimeType": "application/json",
+      "enforceSchema": true,
+      "stripMarkdownFences": true,
+      "rationale": "Elimina preâmbulos conversacionais e tokens de fechamento que aumentam a latência e o consumo de Joules."
+    }
+  },
+  "energyBaselines": {
+    "gemini-3.1-flash-lite": {
+      "joulesPer1kTokens": 1.15,
+      "latencyP50Ms": 140,
+      "recommendedUse": "Extração estruturada, telemetria de sensores, roteamento determinístico"
+    },
+    "gemini-3.8-flash": {
+      "joulesPer1kTokens": 3.42,
+      "latencyP50Ms": 290,
+      "recommendedUse": "Engenharia de software, síntese de código, sumarização analítica"
+    },
+    "gemini-3.1-pro-preview": {
+      "joulesPer1kTokens": 21.8,
+      "latencyP50Ms": 1200,
+      "recommendedUse": "Provas formais, auditorias críticas de segurança"
+    }
+  },
+  "cacheProtocol": {
+    "engine": "@google/genai ai.caches",
+    "recommendedTTLSeconds": 3600,
+    "prefixPinningTarget": "Static systemDirective and JSON validation schemas",
+    "expectedFLOPsReduction": 0.75
+  }
+}
